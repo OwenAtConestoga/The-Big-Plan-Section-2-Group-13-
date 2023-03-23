@@ -1,107 +1,110 @@
+// Icebox Sails
+// Main Source File
+// Cruise Manager Program
+// CSCN71030 - 23W - Sec1 - Team Based Software Development
+// Group 13 - Winter 2023
+// Version 1.0
+
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "errorExit.h"
-#include "cruise.h"
-#include "clearBuffer.h"
+#include <stdio.h>
 
-int main(void) {
+#include "Input.h"
+#include "structs.h"
+#include "menuPrint.h"
+#include "topLevelMenu.h"
+#include "topLevelMenuInput.h"
+#include "seatSelectScreen.h"
 
-	FILE* reservationFile;																					// file pointer
-	CRUISE cruises[NUM_OF_CRUISES] = { {111, {NULL}} , {535, {NULL}} , {771, {NULL}} , {927, {NULL}} };		// four different cruises
-	CRUISE tmp;																								// temporary cruise struct to read previous info
-	PCRUISE cruise;																							// pointer of airplane struct
-	int cruise_size = sizeof(CRUISE);
-	char ch;
-	for (int i = 0; i < NUM_OF_CRUISES; i++)
-	{
-		for (int j = 0; j < ROOMCAPACITY; j++)		//runs twelve times
+#include "searchSeat.h"
+
+#include "fileWriter.h"
+#include "fileReader.h"
+
+Cruise cruises[NUMCRUISES] = {
+	{10, {'\0'}},
+	{30, {'\0'}},
+	{50, {'\0'}},
+	{70, {'\0'}}
+};
+
+int main(void)
+{
+	// read from file 
+	fileReader();
+
+	// print top menu and get user input
+	printf("^_^ Welcome To Icebox Sails! ^_^\n\nPlease select a cruise using the coresponding letter:\n\n");
+	topLevelMenuPrint();
+
+	char topUserInput;
+	topMenuInputFunction(&topUserInput);
+
+
+	int cruiseNumber;
+	int arrayNum;
+
+	while (topUserInput != 'e' && topUserInput != 'E') { // will loop until user input = e/E
+
+		switch (topUserInput)
 		{
-			cruises[i].rooms[j].idNumOfRoom = j;
-			cruises[i].rooms[j].assignedRooms = false;
-		}
-	}
 
-	if ((reservationFile = fopen("CruiseReservestionInfo.dat", "rb")) == NULL)		// if the "CruiseReservestionInfo.dat" file does not exist, create one.
-	{
-		reservationFile = fopen("CruiseReservestionInfo.dat", "wb");
-		fclose(reservationFile);
-	}
-
-	if ((reservationFile = fopen("CruiseReservestionInfo.dat", "rb")) == NULL)
-	{
-		ErrorExit("Could not open file \"CruiseReservestionInfo.dat\" to read.\n");
-	}
-
-	// fread saved data into cruises
-	while (fread(&tmp, cruise_size, 1, reservationFile) == 1)
-	{
-		int idNum = tmp.Id_cruise;
-		for (int i = 0; i < NUM_OF_CRUISES; i++)
+		case 'a': // cruise number 10
+		case 'A':
 		{
-			if (cruises[i].Id_cruise == idNum)
-			{
-				cruises[i] = tmp;
-			}
+			arrayNum = 0;
+			cruiseNumber = 10;
+			menuPrint(cruiseNumber, arrayNum);
+			topLevelMenuPrint();
+			break;
 		}
-	}
-	fclose(reservationFile);
 
+		case 'b': // cruise number 30
+		case 'B':
+		{
+			arrayNum = 1;
+			cruiseNumber = 30;
+			menuPrint(cruiseNumber, arrayNum);
+			topLevelMenuPrint();
+			break;
+		}
 
+		case 'c': // cruise number 50
+		case 'C':
+		{
+			arrayNum = 2;
+			cruiseNumber = 50;
+			menuPrint(cruiseNumber, arrayNum);
+			topLevelMenuPrint();
+			break;
+		}
 
-	if ((reservationFile = fopen("PlainReservestionInfo.dat", "wb")) == NULL)					// open the file for write
-	{
-		ErrorExit("Could not open file \"PlainReservestionInfo.dat\" to write.\n");
-	}
+		case 'd': // cruise number 70
+		case 'D':
+		{
+			arrayNum = 3;
+			cruiseNumber = 70;
+			menuPrint(cruiseNumber, arrayNum);
+			topLevelMenuPrint();
+			break;
+		}
 
-	//do
-	//{
-	//	TopMenu();
-	//	ch = getc(stdin);
-	//	ClearButter();
-	//	switch (ch) {
-	//	case 'a':
-	//	case 'A':
-	//		cruise = &cruises[0];
-	//		ReservationMenu(cruise);
-	//		break;
+		case 'e': // quit
+		case 'E':
+		{
+			goto Exit;
+		}
 
-	//	case 'b':
-	//	case 'B':
-	//		cruise = &cruises[1];
-	//		ReservationMenu(cruise);
-	//		break;
-
-	//	case 'c':
-	//	case 'C':
-	//		cruise = &cruises[2];
-	//		ReservationMenu(cruise);
-	//		break;
-
-	//	case 'd':
-	//	case 'D':
-	//		cruise = &cruises[3];
-	//		ReservationMenu(cruise);
-	//		break;
-
-	//	case 'e':
-	//	case 'E':
-	//		puts("Shutting down the program.");		//Displays a message that the program ends
-	//		break;
-
-	//	default:
-	//		printf("\nInvalid option. Try again!\n");	//if a user entered not between 'a' ~ 'f' or 'A' ~ 'F', display the error msg
-	//		continue;
-	//	}
-	//} while (ch != 'e' && ch != 'E');
-
-	if (fwrite(cruises, cruise_size, NUM_OF_CRUISES, reservationFile) != NUM_OF_CRUISES)		// save the information
-	{
-		ErrorExit("Could not write to file \"CruiseReservestionInfo.dat\".\n");
+		}
+		topMenuInputFunction(&topUserInput);
 	}
 
-	fclose(reservationFile);
+Exit:
 
-	puts("Have a nice day!");
+	// writes seats to file 
+	fileWriter();
+	printf("\nSaved to file\n");
 
 	return 0;
+
 }

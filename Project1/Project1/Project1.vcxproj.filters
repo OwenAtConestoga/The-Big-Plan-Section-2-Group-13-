@@ -18,30 +18,57 @@
     <ClCompile Include="Source.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="upperName.c">
+    <ClCompile Include="searchSeat.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="clearBuffer.c">
+    <ClCompile Include="input.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainMenu.c">
+    <ClCompile Include="menuPrint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="errorExit.c">
+    <ClCompile Include="seatSelectScreen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="topLevelMenu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="topLevelMenuInput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileReader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileWriter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cruise.h">
+    <ClInclude Include="searchSeat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clearBuffer.h">
+    <ClInclude Include="input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="upperName.h">
+    <ClInclude Include="structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="errorExit.h">
+    <ClInclude Include="menuPrint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="topLevelMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="topLevelMenuInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seatSelectScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileWriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

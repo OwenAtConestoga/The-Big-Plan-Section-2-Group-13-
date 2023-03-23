@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clearBuffer.c" />
+    <ClCompile Include="errorExit.c" />
+    <ClCompile Include="mainMenu.c" />
     <ClCompile Include="Source.c" />
+    <ClCompile Include="upperName.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clearBuffer.h" />
+    <ClInclude Include="cruise.h" />
+    <ClInclude Include="errorExit.h" />
+    <ClInclude Include="upperName.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

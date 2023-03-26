@@ -33,14 +33,14 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'a': // show number of empty seats
 		case 'A':
 		{
-			
+			numberEmptySeats();
 			break;
 		}
 
 		case 'b': // show list of empty seats 
 		case 'B':
 		{
-			
+			listEmptySeats();
 			break;
 		}
 

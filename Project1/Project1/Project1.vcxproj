@@ -130,7 +130,9 @@
     <ClCompile Include="fileReader.c" />
     <ClCompile Include="fileWriter.c" />
     <ClCompile Include="input.c" />
+    <ClCompile Include="listEmptySeats.c" />
     <ClCompile Include="menuPrint.c" />
+    <ClCompile Include="numberEmptySeats.c" />
     <ClCompile Include="searchSeat.c" />
     <ClCompile Include="seatSelectScreen.c" />
     <ClCompile Include="Source.c" />
@@ -141,7 +143,9 @@
     <ClInclude Include="fileReader.h" />
     <ClInclude Include="fileWriter.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="listEmptySeats.h" />
     <ClInclude Include="menuPrint.h" />
+    <ClInclude Include="numberEmptySeats.h" />
     <ClInclude Include="searchSeat.h" />
     <ClInclude Include="seatSelectScreen.h" />
     <ClInclude Include="structs.h" />

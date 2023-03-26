@@ -42,6 +42,12 @@
     <ClCompile Include="fileWriter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numberEmptySeats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listEmptySeats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="searchSeat.h">
@@ -69,6 +75,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="fileWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="numberEmptySeats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="listEmptySeats.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

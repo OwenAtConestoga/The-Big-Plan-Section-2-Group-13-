@@ -132,12 +132,14 @@
     <ClCompile Include="input.c" />
     <ClCompile Include="listEmptySeats.c" />
     <ClCompile Include="menuPrint.c" />
+    <ClCompile Include="newSeat.c" />
     <ClCompile Include="numberEmptySeats.c" />
     <ClCompile Include="searchSeat.c" />
     <ClCompile Include="seatSelectScreen.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="topLevelMenu.c" />
     <ClCompile Include="topLevelMenuInput.c" />
+    <ClCompile Include="userSeats.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fileReader.h" />
@@ -145,12 +147,14 @@
     <ClInclude Include="input.h" />
     <ClInclude Include="listEmptySeats.h" />
     <ClInclude Include="menuPrint.h" />
+    <ClInclude Include="newSeat.h" />
     <ClInclude Include="numberEmptySeats.h" />
     <ClInclude Include="searchSeat.h" />
     <ClInclude Include="seatSelectScreen.h" />
     <ClInclude Include="structs.h" />
     <ClInclude Include="topLevelMenu.h" />
     <ClInclude Include="topLevelMenuInput.h" />
+    <ClInclude Include="userSeats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

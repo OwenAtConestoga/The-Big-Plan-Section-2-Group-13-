@@ -12,6 +12,8 @@
 #include "structs.h"
 #include "menuPrint.h"
 #include "seatSelectScreen.h"
+#include "newSeat.h"
+#include "userSeats.h"
 
 #include "searchSeat.h"
 
@@ -25,7 +27,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 
 	userInputFunction(&userInput);
 
-	while (userInput != 'g' && userInput != 'G') // will loop until user input = G/g
+	while (userInput != 'h' && userInput != 'H') // will loop until user input = G/g
 	{
 		switch (userInput)
 		{
@@ -54,7 +56,8 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'd': // assign a person to a seat 
 		case 'D':
 		{
-			
+			newSeat();
+			seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -73,8 +76,16 @@ void menuPrint(int cruiseNumber, int arrayNum)
 			break;
 		}
 
-		case 'g':
+		case 'g': //search all seats by last name
 		case 'G':
+		{
+			userSeats(arrayNum);
+			seatSelect(cruiseNumber);
+			break;
+		}
+
+		case 'h':
+		case 'H':
 		{
 			break;
 		}

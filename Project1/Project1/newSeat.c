@@ -23,7 +23,7 @@
 
 
 
-void newSeat()
+void newSeat(int arrayNum)
 {
 	extern struct Cruise* cruise;
 
@@ -42,29 +42,27 @@ void newSeat()
 
 		for (int i = 0; i < CAPACITY; i++) {
 
-			printf("here1");
-
-			if (!cruise->seats[i].assigned) // if seat is not occupied 
+			if (!cruises[arrayNum].seats[i].assigned) // if seat is not occupied 
 			{
 
 				
 				printf("Seat ID number %d\n", seatID);
 
-				cruise->seats[i].idNumber = seatID; // seat number assignment
+				cruises[arrayNum].seats[i].idNumber = seatID; // seat number assignment
 
 
 				// get day and month of task
 				printf("Enter First Name: ");
-				scanf("%s", cruise->seats[i].firstName);
+				scanf("%s", cruises[arrayNum].seats[i].firstName);
 				printf("Enter Last Name: ");
-				scanf("%s", cruise->seats[i].lastName);
+				scanf("%s", cruises[arrayNum].seats[i].lastName);
 
 
 				printf("Succesfully assigned seat.\n");
 
 
 			}
-			else if (cruise->seats[i].assigned == true) // if user tries to get a task that is already taken
+			else if (cruises[arrayNum].seats[i].assigned == true) // if user tries to get a task that is already taken
 			{
 				printf("\nSorry, seat ID already!\n");
 				return;

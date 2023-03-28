@@ -21,7 +21,7 @@
 #define CAPACITY 12
 
 
-void userSeats(arrayNum) {
+void userSeats(int arrayNum) {
 
 	int length = 0;
 	char tempLast[MAXSIZE];

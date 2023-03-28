@@ -56,7 +56,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'd': // assign a person to a seat 
 		case 'D':
 		{
-			newSeat();
+			newSeat(arrayNum);
 			seatSelect(cruiseNumber);
 			break;
 		}

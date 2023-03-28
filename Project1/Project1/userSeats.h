@@ -6,4 +6,4 @@
 // Group 13 - Winter 2023
 // Version 1.0
 
-void userSeats();
+void userSeats(int);

@@ -45,7 +45,6 @@ void newSeat(int arrayNum)
 			if (!cruises[arrayNum].seats[i].assigned) // if seat is not occupied 
 			{
 
-				
 				printf("Seat ID number %d\n", seatID);
 
 				cruises[arrayNum].seats[i].idNumber = seatID; // seat number assignment
@@ -60,7 +59,7 @@ void newSeat(int arrayNum)
 
 				printf("Succesfully assigned seat.\n");
 
-
+				return;
 			}
 			else if (cruises[arrayNum].seats[i].assigned == true) // if user tries to get a task that is already taken
 			{

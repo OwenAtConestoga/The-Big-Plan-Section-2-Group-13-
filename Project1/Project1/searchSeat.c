@@ -14,7 +14,6 @@
 #include "searchSeat.h"
 #include "structs.h"
 
-#define CAPACITY 12
 #define MAXSIZE 30
 
 void searchSeat(int arrayNum)

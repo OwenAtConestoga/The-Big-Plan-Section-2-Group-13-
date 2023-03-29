@@ -18,9 +18,6 @@
 #include "newSeat.h"
 
 #define EXITNUMBER -1
-#define LOWERLIMIT -2
-#define CAPACITY 12
-
 
 
 void newSeat(int arrayNum)
@@ -55,6 +52,7 @@ void newSeat(int arrayNum)
 				scanf("%s", cruises[arrayNum].seats[i].firstName);
 				printf("Enter Last Name: ");
 				scanf("%s", cruises[arrayNum].seats[i].lastName);
+				cruises[arrayNum].seats[i].assigned == true; 
 
 
 				printf("Succesfully assigned seat.\n");

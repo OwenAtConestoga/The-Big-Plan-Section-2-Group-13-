@@ -35,9 +35,9 @@ void fileReader()
 	// read cruises from file 
 	Cruise tmp;
 
-	int flightSize = sizeof(Cruise);
+	int shipSize = sizeof(Cruise);
 
-	while (fread(&tmp, flightSize, 1, fpointer1) == 1)
+	while (fread(&tmp, shipSize, 1, fpointer1) == 1)
 	{
 		int number = tmp.id;
 

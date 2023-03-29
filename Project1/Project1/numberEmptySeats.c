@@ -23,17 +23,16 @@
 void numberEmptySeats(void)
 {
     // Use the external pointer to access the current cruise data.
-    extern struct Cruise* cruise;
 
     int emptySeats = 0;
 
     // Loop through each seat on the current cruise to check if it's assigned or not
     for (int i = 0; i < CAPACITY; i++)
     {
-        if (!cruise->seats[i].assigned) // If the seat is not assigned, add to the count of empty seats
+        if (!cruises->seats[i].assigned) // If the seat is not assigned, add to the count of empty seats
             emptySeats++;
     }
 
     // Print the number of empty seats on the current cruise
-    printf("There are %d empty seats on this cruise.\n", emptySeats);
+    printf("There are %d empty seats on this cruise.\n\n", emptySeats);
 }

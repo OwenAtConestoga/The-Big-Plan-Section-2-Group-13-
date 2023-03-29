@@ -10,7 +10,7 @@
 #include <stdbool.h>
 
 #define NAMESIZE 30
-#define CAPACITY 20
+#define CAPACITY 10
 #define NUMCRUISES 4
 
 // create seat struct

@@ -27,7 +27,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 
 	userInputFunction(&userInput);
 
-	while (userInput != 'h' && userInput != 'H') // will loop until user input = G/g
+	while (userInput != 'h' && userInput != 'H') // will loop until user input = H/h
 	{
 		switch (userInput)
 		{
@@ -36,6 +36,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'A':
 		{
 			numberEmptySeats();
+			seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -43,6 +44,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'B':
 		{
 			listEmptySeats();
+			seatSelect(cruiseNumber);
 			break;
 		}
 

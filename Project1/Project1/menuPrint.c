@@ -16,6 +16,7 @@
 #include "userSeats.h"
 #include "numberEmptySeats.h"
 #include "listEmptySeats.h"
+#include "listSeat.h"
 
 #include "searchSeat.h"
 
@@ -28,6 +29,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 	seatSelect(cruiseNumber);
 
 	userInputFunction(&userInput);
+
 
 	while (userInput != 'h' && userInput != 'H') // will loop until user input = H/h
 	{
@@ -53,7 +55,8 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'c': // show list of seats with names 
 		case 'C':
 		{
-			
+			listSeat(arrayNum);
+			seatSelect(cruiseNumber);
 			break;
 		}
 

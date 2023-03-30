@@ -30,10 +30,8 @@ void numberEmptySeats(int arrayNum)
     // Loop through each seat on the current cruise to check if it's assigned or not
     for (int i = 0; i < CAPACITY; i++)
     {
-        printf("here1\n");
         if (cruises[arrayNum].seats[i].assigned != true) // If the seat is not assigned, add to the count of empty seats
             emptySeats++;
-        printf("here2\n");
     }
 
     // Print the number of empty seats on the current cruise

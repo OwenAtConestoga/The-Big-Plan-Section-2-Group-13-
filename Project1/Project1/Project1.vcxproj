@@ -131,6 +131,7 @@
     <ClCompile Include="fileWriter.c" />
     <ClCompile Include="input.c" />
     <ClCompile Include="listEmptySeats.c" />
+    <ClCompile Include="listSeat.c" />
     <ClCompile Include="menuPrint.c" />
     <ClCompile Include="newSeat.c" />
     <ClCompile Include="numberEmptySeats.c" />
@@ -146,6 +147,7 @@
     <ClInclude Include="fileWriter.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="listEmptySeats.h" />
+    <ClInclude Include="listSeat.h" />
     <ClInclude Include="menuPrint.h" />
     <ClInclude Include="newSeat.h" />
     <ClInclude Include="numberEmptySeats.h" />

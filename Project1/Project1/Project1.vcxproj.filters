@@ -48,6 +48,15 @@
     <ClCompile Include="listEmptySeats.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="newSeat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="userSeats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listSeat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="searchSeat.h">
@@ -81,6 +90,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="listEmptySeats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newSeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="userSeats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="listSeat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -37,11 +37,16 @@ void newSeat(int arrayNum)
 			exit(EXIT_FAILURE);
 		}
 
+
+
+
 		for (int i = 0; i < CAPACITY; i++) {
 
-			if (!cruises[arrayNum].seats[i].assigned) // if seat is not occupied 
-			{
+	
 
+			if (cruises[arrayNum].seats[i].assigned != true) // if seat is not occupied 
+			{
+				
 				printf("Seat ID number %d\n", ticketID);
 
 				cruises[arrayNum].seats[i].ticketNumber = ticketID; // seat number assignment
@@ -53,24 +58,25 @@ void newSeat(int arrayNum)
 				printf("Enter Last Name: ");
 				scanf("%s", cruises[arrayNum].seats[i].lastName);
 				cruises[arrayNum].seats[i].assigned = true; 
-
-
+				
+				printf("\n");
 				printf("Succesfully assigned seat.\n");
+				printf("\n");
 
 				return;
 			}
-			else if (cruises[arrayNum].seats[i].assigned == true) // if user tries to get a task that is already taken
-			{
-				printf("\nSorry, seat ID already !\n");
+			
+			else if (cruises[arrayNum].seats[9].assigned == true){
+				printf("\n");
+				printf("---------------------------------------------");
+				printf("\n!!!There are no more seats on this cruise!!!\n");
+				printf("            We are very sorry:(\n");
+				printf("---------------------------------------------");
+				printf("\n");
 				return;
 			}
-
 		}
-		if (ticketID == EXITNUMBER) // if input = -1 (the number to abort operation)
-		{
-			printf("\nQuit!\n");
-			return;
-		}
+		
 
 
 }

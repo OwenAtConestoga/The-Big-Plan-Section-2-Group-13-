@@ -10,7 +10,9 @@
 
 void seatSelect(int cruiseNumber)
 {
+	printf("\n");
 	printf("You have selected cruise number %d\n\n", cruiseNumber);
+	printf("\n");
 	printf("a) Show number of empty seats\nb) Show list of empty seats\nc) Show list of seats\n");
 	printf("d) Assign a customer to a seat assignment\ne) Delete desired seat\n");
 	printf("f) Search Seat\ng) Search Seats by Last Name\n");

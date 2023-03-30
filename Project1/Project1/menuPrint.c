@@ -71,7 +71,8 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'e': // delete a seat 
 		case 'E':
 		{
-			
+			deleteSeat(arrayNum); 
+			seatSelect(cruiseNumber); 
 			break;
 		}
 

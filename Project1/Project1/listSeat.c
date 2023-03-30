@@ -25,7 +25,7 @@ void listSeat(int arrayNum) {
 		if (cruises[arrayNum].seats[i].assigned == true) // print out the seats that are occupied 
 		{
 			printf("\n");
-			printf("\Seat ID: %d\nFirst Name: %s\nLast Name: %s\n", cruises[arrayNum].seats[i].ticketNumber, cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
+			printf("\Seat ID: %d\nTicketNumber: %d\nFirst Name: %s\nLast Name: %s\n", cruises[arrayNum].seats[i].idNumber, cruises[arrayNum].seats[i].ticketNumber, cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
 			counter++;
 		}
 	}

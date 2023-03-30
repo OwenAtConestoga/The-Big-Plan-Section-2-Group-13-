@@ -57,6 +57,9 @@
     <ClCompile Include="listSeat.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="deleteSeat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="searchSeat.h">
@@ -99,6 +102,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="listSeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deleteSeat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

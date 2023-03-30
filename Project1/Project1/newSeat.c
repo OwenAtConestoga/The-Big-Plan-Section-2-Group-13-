@@ -47,12 +47,14 @@ void newSeat(int arrayNum)
 			if (cruises[arrayNum].seats[i].assigned != true) // if seat is not occupied 
 			{
 				
-				printf("Seat ID number %d\n", ticketID);
+				printf("Ticket Number %d\n", ticketID);
 
-				cruises[arrayNum].seats[i].ticketNumber = ticketID; // seat number assignment
+				cruises[arrayNum].seats[i].ticketNumber = ticketID; // ticket number assignment
+
+				cruises[arrayNum].seats[i].idNumber = i; 
 
 
-				// get day and month of task
+
 				printf("Enter First Name: ");
 				scanf("%s", cruises[arrayNum].seats[i].firstName);
 				printf("Enter Last Name: ");

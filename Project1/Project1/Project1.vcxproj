@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="deleteSeat.c" />
     <ClCompile Include="fileReader.c" />
     <ClCompile Include="fileWriter.c" />
     <ClCompile Include="input.c" />
@@ -143,6 +144,7 @@
     <ClCompile Include="userSeats.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="deleteSeat.h" />
     <ClInclude Include="fileReader.h" />
     <ClInclude Include="fileWriter.h" />
     <ClInclude Include="input.h" />

@@ -20,6 +20,7 @@ typedef struct Seat {
 	char confirmMessage[NAMESIZE];
 	char lastName[NAMESIZE];
 	char firstName[NAMESIZE];
+	int ticketNumber;
 }Seat;
 
 // create cruise struct

@@ -6,4 +6,4 @@
 
 #pragma once
 
-void listEmptySeats(void);						// Print a list of the empty seats on the selected flight
+void listEmptySeats(int);						// Print a list of the empty seats on the selected flight

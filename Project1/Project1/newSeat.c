@@ -26,14 +26,14 @@ void newSeat(int arrayNum)
 
 	srand(time(NULL));
 
-	int seatID;
-	seatID = rand() % 12345;
+	int ticketID;
+	ticketID = rand() % 12345;
 
 	
 		// checks if tasknum is null
-		if (seatID == NULL)
+		if (ticketID == NULL)
 		{
-			printf("ERROR creating seatID\n");
+			printf("ERROR creating ticketID\n");
 			exit(EXIT_FAILURE);
 		}
 
@@ -42,9 +42,9 @@ void newSeat(int arrayNum)
 			if (!cruises[arrayNum].seats[i].assigned) // if seat is not occupied 
 			{
 
-				printf("Seat ID number %d\n", seatID);
+				printf("Seat ID number %d\n", ticketID);
 
-				cruises[arrayNum].seats[i].idNumber = seatID; // seat number assignment
+				cruises[arrayNum].seats[i].ticketNumber = ticketID; // seat number assignment
 
 
 				// get day and month of task
@@ -52,7 +52,7 @@ void newSeat(int arrayNum)
 				scanf("%s", cruises[arrayNum].seats[i].firstName);
 				printf("Enter Last Name: ");
 				scanf("%s", cruises[arrayNum].seats[i].lastName);
-				cruises[arrayNum].seats[i].assigned == true; 
+				cruises[arrayNum].seats[i].assigned = true; 
 
 
 				printf("Succesfully assigned seat.\n");
@@ -61,12 +61,12 @@ void newSeat(int arrayNum)
 			}
 			else if (cruises[arrayNum].seats[i].assigned == true) // if user tries to get a task that is already taken
 			{
-				printf("\nSorry, seat ID already!\n");
+				printf("\nSorry, seat ID already !\n");
 				return;
 			}
 
 		}
-		if (seatID == EXITNUMBER) // if input = -1 (the number to abort operation)
+		if (ticketID == EXITNUMBER) // if input = -1 (the number to abort operation)
 		{
 			printf("\nQuit!\n");
 			return;

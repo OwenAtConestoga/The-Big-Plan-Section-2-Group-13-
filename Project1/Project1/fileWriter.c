@@ -17,7 +17,7 @@
 void fileWriter()
 {
 	// write cruises into file using append mode 
-	FILE* fpointer1 = fopen("FlightAssignNew.dat", "ab");
+	FILE* fpointer1 = fopen("CruiseReservestionInfo.dat", "ab");
 
 	int size = sizeof(Cruise);
 

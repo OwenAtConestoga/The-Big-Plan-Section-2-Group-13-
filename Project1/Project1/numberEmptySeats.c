@@ -13,6 +13,7 @@
 #include "topLevelMenu.h"
 #include "topLevelMenuInput.h"
 #include "seatSelectScreen.h"
+#include <stdbool.h>
 
 #include "searchSeat.h"
 
@@ -20,7 +21,7 @@
 #include "fileReader.h"
 
 
-void numberEmptySeats(void)
+void numberEmptySeats(int arrayNum)
 {
     // Use the external pointer to access the current cruise data.
 
@@ -29,8 +30,10 @@ void numberEmptySeats(void)
     // Loop through each seat on the current cruise to check if it's assigned or not
     for (int i = 0; i < CAPACITY; i++)
     {
-        if (!cruises->seats[i].assigned) // If the seat is not assigned, add to the count of empty seats
+        printf("here1\n");
+        if (cruises[arrayNum].seats[i].assigned != true) // If the seat is not assigned, add to the count of empty seats
             emptySeats++;
+        printf("here2\n");
     }
 
     // Print the number of empty seats on the current cruise

@@ -18,9 +18,9 @@ void fileReader()
 	// create new file if it does not exist
 	FILE* fpointer1;
 
-	if ((fpointer1 = fopen("FlightAssignNew.dat", "rb")) == NULL) {
+	if ((fpointer1 = fopen("CruiseReservestionInfo.dat", "rb")) == NULL) {
 		printf("\nCould not read FlightAssignNew.dat, new File Created!\n");
-		fpointer1 = fopen("FlightAssignNew.dat", "ab");
+		fpointer1 = fopen("CruiseReservestionInfo.dat", "ab");
 	}
 
 	// assign ID number

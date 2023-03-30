@@ -6,4 +6,4 @@
 
 #pragma once
 
-void numberEmptySeats(void);			// Function to list the number of empty seats on a flight
+void numberEmptySeats(int);			// Function to list the number of empty seats on a flight

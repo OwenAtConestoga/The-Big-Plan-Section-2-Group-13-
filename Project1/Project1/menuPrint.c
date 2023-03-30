@@ -14,6 +14,8 @@
 #include "seatSelectScreen.h"
 #include "newSeat.h"
 #include "userSeats.h"
+#include "numberEmptySeats.h"
+#include "listEmptySeats.h"
 
 #include "searchSeat.h"
 
@@ -35,7 +37,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'a': // show number of empty seats
 		case 'A':
 		{
-			numberEmptySeats();
+			numberEmptySeats(arrayNum);
 			seatSelect(cruiseNumber);
 			break;
 		}
@@ -43,7 +45,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'b': // show list of empty seats 
 		case 'B':
 		{
-			listEmptySeats();
+			listEmptySeats(arrayNum);
 			seatSelect(cruiseNumber);
 			break;
 		}

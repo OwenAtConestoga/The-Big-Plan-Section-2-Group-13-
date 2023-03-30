@@ -63,6 +63,8 @@ void newSeat(int arrayNum)
 				
 				printf("\n");
 				printf("Succesfully assigned seat.\n");
+				printf("Ticket number: %d\n", ticketID);
+				printf("Seat number: %d", i);
 				printf("\n");
 
 				return;

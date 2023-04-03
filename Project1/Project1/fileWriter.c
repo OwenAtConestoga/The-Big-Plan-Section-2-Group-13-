@@ -24,4 +24,5 @@ void fileWriter()
 
 	fclose(fpointer1);
 
+	puts("\nFile Sucessfully Saved\n");
 }

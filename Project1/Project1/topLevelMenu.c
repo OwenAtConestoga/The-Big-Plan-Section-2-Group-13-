@@ -10,11 +10,14 @@
 void topLevelMenuPrint()
 {
 	// displays menu
-	printf("\na) Cruise 10\nb) Cruise 30 \n");
-	printf("c) Cruise 50\n");
-	printf("d) Cruise 70\ne) Quit\n");
-	printf("\n---------------------------");
-	printf("\nCruise Option: ");
+	puts("\n<Cruise Options> ");
+	puts("a) Cruise 10");
+	puts("b) Cruise 30");
+	puts("c) Cruise 50");
+	puts("d) Cruise 70");
+	puts("e) Quit");
+	puts("---------------------------");
+	printf("Cruise Option: ");
 
 	return;
 }

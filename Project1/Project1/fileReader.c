@@ -15,14 +15,20 @@
 
 void fileReader()
 {
-	printf("File Sucessfully Read\n\n");
 
 	// create new file if it does not exist
 	FILE* fpointer1;
 
 	if ((fpointer1 = fopen("CruiseReservationInfo.dat", "rb")) == NULL) {
-		printf("\nCould not read CruiseReservationInfo.dat, new File Created!\n");
+		puts("Could not read CruiseReservationInfo.dat, new File Created!\n");
 		fpointer1 = fopen("CruiseReservationInfo.dat", "ab");
+	}
+
+	// error handling: if the file does not open to read, terminate the program.
+	if ((fpointer1 = fopen("CruiseReservationInfo.dat", "rb")) == NULL)					
+	{
+		puts("Error: Could not open file \"CruiseReservationInfo.dat\" to read.\n");
+		exit(EXIT_FAILURE);
 	}
 
 	// assign ID number
@@ -54,4 +60,6 @@ void fileReader()
 	}
 
 	fclose(fpointer1);
+
+	puts("File Sucessfully Read\n");
 }

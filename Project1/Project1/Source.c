@@ -34,7 +34,7 @@ int main(void)
 	fileReader();
 
 	// print top menu and get user input
-	printf("^_^ Welcome To Icebox Sails! ^_^\n\nPlease select a cruise using the coresponding letter:\n\n");
+	puts("^_^ Welcome To Icebox Sails! ^_^\n\nPlease select a cruise using the coresponding letter:");
 	topLevelMenuPrint();
 
 	char topUserInput;
@@ -103,7 +103,7 @@ Exit:
 
 	// writes seats to file 
 	fileWriter();
-	printf("\nSaved to file\n");
+	puts("^_^ Have a nice day ^_^");
 
 	return 0;
 

@@ -23,40 +23,34 @@ void userSeats(int arrayNum) {
 	int length = 0;
 	char tempLast[NAMESIZE];
 
-	fgetc(stdin); 
+	fgetc(stdin);	// Consume the newline character left in the input buffer.
 
-	printf("Enter Last Name to search the seats that are under that name: \n");
-	fgets(tempLast, NAMESIZE, stdin);
-	length = strlen(tempLast);
+	printf("Enter Last Name to search the seats that are under that name: ");
+	fgets(tempLast, NAMESIZE, stdin);		// Read a string from standard input and store it in tempLast.
+	length = strlen(tempLast);				// Get the length of the input string and remove the newline character.
 	tempLast[length - 1] = 0;
 
+	// Declare and initialize local variables.
 	int nameCmp;
-
 	int notFoundCount = 0; 
 
 	for (int i = 0; i < CAPACITY; i++){
 
-		nameCmp = strcmp(tempLast, cruises[arrayNum].seats[i].lastName);
-
+		nameCmp = strcmp(tempLast, cruises[arrayNum].seats[i].lastName);		// Compare the input last name with the last name for the current seat reservation.
+																				// If there is a match, print the details for the seat reservation.
 		if (nameCmp == 0) {
 			notFoundCount--; 
 			printf("\nName: %s %s\n", cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
 			printf("Seat ID: %d\n", cruises[arrayNum].seats[i].idNumber);
-			printf("\n");
-
+			puts("");
 
 		}
 
-		notFoundCount++;
-
+		notFoundCount++;					// Increment the not found count.
+											// If the not found count is equal to the capacity, the input last name was not found.
 		if (notFoundCount == CAPACITY)
 		{
-			printf("Name not found!\n"); 
+			puts("\nName not found!"); 
 		}
-
-		
-
-
-
 	}
 }

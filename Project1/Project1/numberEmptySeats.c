@@ -1,5 +1,5 @@
 // Icebox Sails
-// Struct Header File 
+// Number Of Empty Seats Function File  
 // CSCN71030 - 23W - Sec1 - Team Based Software Development
 // Group 13 - Winter 2023
 // Version 1.0
@@ -23,11 +23,9 @@
 
 void numberEmptySeats(int arrayNum)
 {
-    // Use the external pointer to access the current cruise data.
 
     int emptySeats = 0;
 
-    // Loop through each seat on the current cruise to check if it's assigned or not
     for (int i = 0; i < CAPACITY; i++)
     {
         if (cruises[arrayNum].seats[i].assigned != true) // If the seat is not assigned, add to the count of empty seats

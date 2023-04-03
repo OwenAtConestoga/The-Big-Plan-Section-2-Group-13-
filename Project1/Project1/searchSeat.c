@@ -55,7 +55,7 @@ void searchSeat(int arrayNum)
 		// if both values are true, meaning that there was a match 
 		if (value1 == 0 && value2 == 0)
 		{
-			printf("\nName: %s %s - Succesfully confirmed seat\n\n", cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
+			printf("\nName: %s %s - Has an existing reservation\n\n", cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
 			counterTrue++;
 		}
 

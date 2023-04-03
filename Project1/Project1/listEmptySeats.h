@@ -1,9 +1,9 @@
 // Icebox Sails
-// Struct Header File 
+// List Of Empty Seats Header File 
 // CSCN71030 - 23W - Sec1 - Team Based Software Development
 // Group 13 - Winter 2023
 // Version 1.0
 
 #pragma once
 
-void listEmptySeats(int);						// Print a list of the empty seats on the selected flight
+void listEmptySeats(int);						

@@ -22,7 +22,6 @@
 
 void menuPrint(int cruiseNumber, int arrayNum)
 {
-	extern struct Cruise* cruise;
 
 	char userInput = 0;
 

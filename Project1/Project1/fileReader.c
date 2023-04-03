@@ -15,12 +15,14 @@
 
 void fileReader()
 {
+	printf("File Sucessfully Read\n\n");
+
 	// create new file if it does not exist
 	FILE* fpointer1;
 
-	if ((fpointer1 = fopen("CruiseReservestionInfo.dat", "rb")) == NULL) {
-		printf("\nCould not read FlightAssignNew.dat, new File Created!\n");
-		fpointer1 = fopen("CruiseReservestionInfo.dat", "ab");
+	if ((fpointer1 = fopen("CruiseReservationInfo.dat", "rb")) == NULL) {
+		printf("\nCould not read CruiseReservationInfo.dat, new File Created!\n");
+		fpointer1 = fopen("CruiseReservationInfo.dat", "ab");
 	}
 
 	// assign ID number

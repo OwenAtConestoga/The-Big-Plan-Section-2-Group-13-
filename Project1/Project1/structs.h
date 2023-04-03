@@ -17,7 +17,6 @@
 typedef struct Seat {
 	int idNumber;
 	bool assigned;
-	char confirmMessage[NAMESIZE];
 	char lastName[NAMESIZE];
 	char firstName[NAMESIZE];
 	int ticketNumber;

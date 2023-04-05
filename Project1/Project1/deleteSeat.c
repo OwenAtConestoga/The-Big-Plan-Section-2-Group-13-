@@ -53,7 +53,7 @@ void deleteSeat(int arrayNum)
 
 				cruises[arrayNum].seats[*seatNum].assigned = false; // deassign the seat
 
-				printf("\nSeat has been successfully deleted.");
+				puts("\nSeat has been successfully deleted.");
 
 			}
 			else if (cruises[arrayNum].seats[*seatNum].assigned != true) // if the user tries to delete seat that is already empty

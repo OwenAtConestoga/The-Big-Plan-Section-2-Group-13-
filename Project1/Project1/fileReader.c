@@ -13,19 +13,19 @@
 #include "structs.h"
 #include "fileReader.h"
 
-void fileReader()
+void fileReader(char* fileName)
 {
 
 	// create new file if it does not exist
 	FILE* fpointer1;
 
-	if ((fpointer1 = fopen("CruiseReservationInfo.dat", "rb")) == NULL) {
+	if ((fpointer1 = fopen(fileName, "rb")) == NULL) {
 		puts("Could not read CruiseReservationInfo.dat, new File Created!\n");
-		fpointer1 = fopen("CruiseReservationInfo.dat", "ab");
+		fpointer1 = fopen(fileName, "ab");
 	}
 
 	// error handling: if the file does not open to read, terminate the program.
-	if ((fpointer1 = fopen("CruiseReservationInfo.dat", "rb")) == NULL)					
+	if ((fpointer1 = fopen(fileName, "rb")) == NULL)					
 	{
 		puts("Error: Could not open file \"CruiseReservationInfo.dat\" to read.\n");
 		exit(EXIT_FAILURE);

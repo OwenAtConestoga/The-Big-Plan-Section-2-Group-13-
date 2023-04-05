@@ -27,10 +27,15 @@ Cruise cruises[NUMCRUISES] = {
 	{70, {'\0'}}
 };
 
-int main(void)
+int main(int argc, char* argv[])
 {
+
+	char* fileName = argv[1];
+
+	printf("%s", fileName);
+
 	// read from file 
-	fileReader();
+	fileReader(fileName);
 
 	char topUserInput;
 	int cruiseNumber;
@@ -101,7 +106,7 @@ int main(void)
 Exit:
 
 	// writes seats to file 
-	fileWriter();
+	fileWriter(fileName);
 	puts("^_^ Have a nice day ^_^");
 
 	return 0;

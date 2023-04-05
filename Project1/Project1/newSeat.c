@@ -14,7 +14,6 @@
 #include <time.h>
 
 #include "clearBuffer.h"
-#include "input.h"
 #include "structs.h"
 #include "newSeat.h"
 

@@ -9,7 +9,6 @@
 #include <stdio.h>
 
 #include "clearBuffer.h"
-#include "Input.h"
 #include "structs.h"
 #include "menuPrint.h"
 #include "seatSelectScreen.h"
@@ -26,14 +25,9 @@ void menuPrint(int cruiseNumber, int arrayNum)
 
 	char userInput = 0;
 
-	/*seatSelect(cruiseNumber);
-
-	userInputFunction(&userInput);*/
-
 	do
 	{
 		seatSelect(cruiseNumber);
-		//userInputFunction(&userInput); dont need this anymore
 		userInput = getc(stdin);
 		clearButter();
 
@@ -45,7 +39,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'A':
 		{
 			numberEmptySeats(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -53,7 +46,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'B':
 		{
 			listEmptySeats(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -61,7 +53,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'C':
 		{
 			listSeat(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -69,7 +60,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'D':
 		{
 			newSeat(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -77,7 +67,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'E':
 		{
 			deleteSeat(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -85,7 +74,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'F':
 		{
 			searchSeat(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -93,7 +81,6 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'G':
 		{
 			userSeats(arrayNum);
-			//seatSelect(cruiseNumber);
 			break;
 		}
 

@@ -10,11 +10,9 @@
 #include <stdio.h>
 
 #include "clearBuffer.h"
-#include "Input.h"
 #include "structs.h"
 #include "menuPrint.h"
 #include "topLevelMenu.h"
-#include "topLevelMenuInput.h"
 #include "seatSelectScreen.h"
 
 #include "searchSeat.h"
@@ -41,12 +39,9 @@ int main(void)
 	// print top menu and get user input
 	puts("^_^ Welcome To Icebox Sails! ^_^\n\nPlease select a cruise using the coresponding letter:");
 	
-	/*topLevelMenuPrint();*/
-	/*topMenuInputFunction(&topUserInput);*/	//dont need this anymore
 	do 
 	{ 
 		topLevelMenuPrint();
-		//topMenuInputFunction(&topUserInput);
 		topUserInput = getc(stdin);
 		clearButter();
 
@@ -59,7 +54,6 @@ int main(void)
 			arrayNum = 0;
 			cruiseNumber = 10;
 			menuPrint(cruiseNumber, arrayNum);
-
 			break;
 		}
 
@@ -69,7 +63,6 @@ int main(void)
 			arrayNum = 1;
 			cruiseNumber = 30;
 			menuPrint(cruiseNumber, arrayNum);
-			//topLevelMenuPrint();
 			break;
 		}
 
@@ -79,7 +72,6 @@ int main(void)
 			arrayNum = 2;
 			cruiseNumber = 50;
 			menuPrint(cruiseNumber, arrayNum);
-			//topLevelMenuPrint();
 			break;
 		}
 
@@ -89,7 +81,6 @@ int main(void)
 			arrayNum = 3;
 			cruiseNumber = 70;
 			menuPrint(cruiseNumber, arrayNum);
-			//topLevelMenuPrint();
 			break;
 		}
 

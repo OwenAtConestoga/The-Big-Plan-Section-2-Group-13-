@@ -131,7 +131,6 @@
     <ClCompile Include="deleteSeat.c" />
     <ClCompile Include="fileReader.c" />
     <ClCompile Include="fileWriter.c" />
-    <ClCompile Include="input.c" />
     <ClCompile Include="listEmptySeats.c" />
     <ClCompile Include="listSeat.c" />
     <ClCompile Include="menuPrint.c" />
@@ -141,7 +140,6 @@
     <ClCompile Include="seatSelectScreen.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="topLevelMenu.c" />
-    <ClCompile Include="topLevelMenuInput.c" />
     <ClCompile Include="userSeats.c" />
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +147,6 @@
     <ClInclude Include="deleteSeat.h" />
     <ClInclude Include="fileReader.h" />
     <ClInclude Include="fileWriter.h" />
-    <ClInclude Include="input.h" />
     <ClInclude Include="listEmptySeats.h" />
     <ClInclude Include="listSeat.h" />
     <ClInclude Include="menuPrint.h" />
@@ -159,7 +156,6 @@
     <ClInclude Include="seatSelectScreen.h" />
     <ClInclude Include="structs.h" />
     <ClInclude Include="topLevelMenu.h" />
-    <ClInclude Include="topLevelMenuInput.h" />
     <ClInclude Include="userSeats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -21,9 +21,6 @@
     <ClCompile Include="searchSeat.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="input.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="menuPrint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,9 +28,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="topLevelMenu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="topLevelMenuInput.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fileReader.c">
@@ -68,9 +62,6 @@
     <ClInclude Include="searchSeat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -78,9 +69,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="topLevelMenu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="topLevelMenuInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="seatSelectScreen.h">

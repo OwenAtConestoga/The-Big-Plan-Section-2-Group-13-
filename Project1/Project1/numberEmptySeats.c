@@ -7,11 +7,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-#include "Input.h"
 #include "structs.h"
 #include "menuPrint.h"
 #include "topLevelMenu.h"
-#include "topLevelMenuInput.h"
 #include "seatSelectScreen.h"
 #include <stdbool.h>
 

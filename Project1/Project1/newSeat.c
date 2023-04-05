@@ -13,6 +13,7 @@
 #include <stdbool.h>
 #include <time.h>
 
+#include "clearBuffer.h"
 #include "input.h"
 #include "structs.h"
 #include "newSeat.h"
@@ -48,14 +49,17 @@ void newSeat(int arrayNum)
 
 				printf("Enter First Name: "); // Assign first and last name to customer reservation
 				scanf("%s", cruises[arrayNum].seats[i].firstName);
+				clearButter();
 				printf("Enter Last Name: ");
 				scanf("%s", cruises[arrayNum].seats[i].lastName);
+				clearButter();
 				cruises[arrayNum].seats[i].assigned = true; 
 				
 				// print out the ticket number and seat number 
-				printf("\nSuccesfully assigned seat.\n");
-				printf("Ticket number: %d\n", ticketID);
-				printf("Seat number: %d\n", i);
+				printf("\n<The reservation is successfully done>\n");
+				printf("Seat number: %d\n", i + 1);  //The ticket number starts 1
+				printf("Ticket number: %d\n", ticketID); 
+				printf("Passenger's name: %s %s\n", cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
 
 				return;
 			}

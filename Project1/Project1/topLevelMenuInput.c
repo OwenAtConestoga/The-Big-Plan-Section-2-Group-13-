@@ -14,3 +14,5 @@ void topMenuInputFunction(char* topInput)
 {
 	scanf("%c", topInput);
 }
+
+// Dont need this anymore

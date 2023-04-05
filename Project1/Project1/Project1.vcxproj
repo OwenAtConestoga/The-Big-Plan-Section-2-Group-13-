@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clearBuffer.c" />
     <ClCompile Include="deleteSeat.c" />
     <ClCompile Include="fileReader.c" />
     <ClCompile Include="fileWriter.c" />
@@ -144,6 +145,7 @@
     <ClCompile Include="userSeats.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clearBuffer.h" />
     <ClInclude Include="deleteSeat.h" />
     <ClInclude Include="fileReader.h" />
     <ClInclude Include="fileWriter.h" />

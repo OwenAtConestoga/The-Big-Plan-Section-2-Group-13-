@@ -13,7 +13,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "input.h"
 #include "structs.h"
 #include "newSeat.h"
 
@@ -24,15 +23,15 @@ void listSeat(int arrayNum) {
 	for (int i = 0; i < CAPACITY; i++) {
 		if (cruises[arrayNum].seats[i].assigned == true) // print out the seats that are occupied 
 		{
-			printf("\n");
-			printf("\Seat ID: %d\nTicket Number: %d\nFirst Name: %s\nLast Name: %s\n", cruises[arrayNum].seats[i].idNumber, cruises[arrayNum].seats[i].ticketNumber, cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
-			counter++;
+			puts("");
+			printf("Seat ID: %d\nTicket Number: %d\nFirst Name: %s\nLast Name: %s\n", cruises[arrayNum].seats[i].idNumber + 1, cruises[arrayNum].seats[i].ticketNumber, cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
+			counter++;																	// ^ the seat Id starts from 1
 		}
 	}
 
 	if (counter == 0) // prints out message if no seats are occupied 
 	{
-		printf("No seats have been assigned yet!\n");
+		puts("No seats have been assigned yet!");
 	}
 
 

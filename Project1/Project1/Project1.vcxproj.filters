@@ -60,6 +60,9 @@
     <ClCompile Include="deleteSeat.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="clearBuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="searchSeat.h">
@@ -105,6 +108,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="deleteSeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clearBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

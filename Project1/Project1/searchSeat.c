@@ -11,6 +11,7 @@
 #include <string.h>
 #include <stdbool.h>
 
+#include "clearBuffer.h"
 #include "searchSeat.h"
 #include "structs.h"
 
@@ -22,7 +23,7 @@ void searchSeat(int arrayNum)
 	char tmpFirst[MAXSIZE];
 	char tmpLast[MAXSIZE];
 
-	fgetc(stdin); // consumes newline so we can use fgets
+	clearButter(); // consumes newline so we can use fgets
 
 	// prompt user for first and last name
 
@@ -30,12 +31,14 @@ void searchSeat(int arrayNum)
 
 	printf("Enter First Name: ");
 	fgets(tmpFirst, MAXSIZE, stdin);
+	clearButter();
 	length = strlen(tmpFirst);
 	tmpFirst[length - 1] = 0; // gets rid of newline
 
 
 	printf("Enter Last Name: ");
 	fgets(tmpLast, MAXSIZE, stdin);
+	clearButter();
 	length = strlen(tmpLast);
 	tmpLast[length - 1] = 0;
 
@@ -55,7 +58,10 @@ void searchSeat(int arrayNum)
 		// if both values are true, meaning that there was a match 
 		if (value1 == 0 && value2 == 0)
 		{
-			printf("\nName: %s %s - Has an existing reservation\n\n", cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
+			puts("\n<The reservation has been found>");
+			printf("Seat ID: %d\n", cruises[arrayNum].seats[i].idNumber + 1);
+			printf("Tiket number: %d\n", cruises[arrayNum].seats[i].ticketNumber);
+			printf("Passenger's name: %s %s\n\n", cruises[arrayNum].seats[i].firstName, cruises[arrayNum].seats[i].lastName);
 			counterTrue++;
 		}
 

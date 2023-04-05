@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 
+#include "clearBuffer.h"
 #include "Input.h"
 #include "structs.h"
 #include "menuPrint.h"
@@ -33,18 +34,21 @@ int main(void)
 	// read from file 
 	fileReader();
 
-	// print top menu and get user input
-	puts("^_^ Welcome To Icebox Sails! ^_^\n\nPlease select a cruise using the coresponding letter:");
-	topLevelMenuPrint();
-
 	char topUserInput;
-	topMenuInputFunction(&topUserInput);
-
-
 	int cruiseNumber;
 	int arrayNum;
 
-	while (topUserInput != 'e' && topUserInput != 'E') { // will loop until user input = e/E
+	// print top menu and get user input
+	puts("^_^ Welcome To Icebox Sails! ^_^\n\nPlease select a cruise using the coresponding letter:");
+	
+	/*topLevelMenuPrint();*/
+	/*topMenuInputFunction(&topUserInput);*/	//dont need this anymore
+	do 
+	{ 
+		topLevelMenuPrint();
+		//topMenuInputFunction(&topUserInput);
+		topUserInput = getc(stdin);
+		clearButter();
 
 		switch (topUserInput)
 		{
@@ -55,7 +59,7 @@ int main(void)
 			arrayNum = 0;
 			cruiseNumber = 10;
 			menuPrint(cruiseNumber, arrayNum);
-			topLevelMenuPrint();
+
 			break;
 		}
 
@@ -65,7 +69,7 @@ int main(void)
 			arrayNum = 1;
 			cruiseNumber = 30;
 			menuPrint(cruiseNumber, arrayNum);
-			topLevelMenuPrint();
+			//topLevelMenuPrint();
 			break;
 		}
 
@@ -75,7 +79,7 @@ int main(void)
 			arrayNum = 2;
 			cruiseNumber = 50;
 			menuPrint(cruiseNumber, arrayNum);
-			topLevelMenuPrint();
+			//topLevelMenuPrint();
 			break;
 		}
 
@@ -85,7 +89,7 @@ int main(void)
 			arrayNum = 3;
 			cruiseNumber = 70;
 			menuPrint(cruiseNumber, arrayNum);
-			topLevelMenuPrint();
+			//topLevelMenuPrint();
 			break;
 		}
 
@@ -95,9 +99,13 @@ int main(void)
 			goto Exit;
 		}
 
+		default:
+			printf("\nInvalid option. Try again!\n");	//if a user entered not between 'a' ~ 'e' or 'A' ~ 'E', display the error msg
+			continue;
 		}
-		topMenuInputFunction(&topUserInput);
-	}
+	
+
+	} while (topUserInput != 'e' && topUserInput != 'E'); // will loop until user input = e/E
 
 Exit:
 

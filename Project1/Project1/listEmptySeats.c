@@ -18,7 +18,7 @@ void listEmptySeats(int arrayNum) {
 
     for (int i = 0; i < CAPACITY; i++) {  // Run a loop to scan through all the seats
         if (cruises[arrayNum].seats[i].assigned != true) { 
-            printf("Seat %d is available!\n", i); // Print seat number if it is no assigned 
+            printf("Seat %d is available!\n", i + 1); // Print seat number if it is no assigned (The seat Id starts 1)
         }
     }
 }

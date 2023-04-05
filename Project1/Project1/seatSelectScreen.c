@@ -18,7 +18,7 @@ void seatSelect(int cruiseNumber)
 	puts("e) Delete desired seat");
 	puts("f) Search Seat");
 	puts("g) Search Seats by Last Name");
-	puts("h) Quit To Top Main Menu");
+	puts("h) Quit To Cruise Option Page");
 	puts("---------------------------");
 	printf("Command: ");
 }

@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 
+#include "clearBuffer.h"
 #include "Input.h"
 #include "structs.h"
 #include "menuPrint.h"
@@ -25,13 +26,18 @@ void menuPrint(int cruiseNumber, int arrayNum)
 
 	char userInput = 0;
 
-	seatSelect(cruiseNumber);
+	/*seatSelect(cruiseNumber);
 
-	userInputFunction(&userInput);
+	userInputFunction(&userInput);*/
 
-
-	while (userInput != 'h' && userInput != 'H') // will loop until user input = H/h
+	do
 	{
+		seatSelect(cruiseNumber);
+		//userInputFunction(&userInput); dont need this anymore
+		userInput = getc(stdin);
+		clearButter();
+
+
 		switch (userInput)
 		{
 
@@ -39,7 +45,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'A':
 		{
 			numberEmptySeats(arrayNum);
-			seatSelect(cruiseNumber);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -47,7 +53,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'B':
 		{
 			listEmptySeats(arrayNum);
-			seatSelect(cruiseNumber);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -55,7 +61,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'C':
 		{
 			listSeat(arrayNum);
-			seatSelect(cruiseNumber);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -63,23 +69,23 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'D':
 		{
 			newSeat(arrayNum);
-			seatSelect(cruiseNumber);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
 		case 'e': // delete a seat 
 		case 'E':
 		{
-			deleteSeat(arrayNum); 
-			seatSelect(cruiseNumber); 
+			deleteSeat(arrayNum);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
 		case 'f': // search a seat
 		case 'F':
 		{
-			searchSeat(arrayNum); 
-			seatSelect(cruiseNumber);
+			searchSeat(arrayNum);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
@@ -87,19 +93,24 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		case 'G':
 		{
 			userSeats(arrayNum);
-			seatSelect(cruiseNumber);
+			//seatSelect(cruiseNumber);
 			break;
 		}
 
 		case 'h':
 		case 'H':
 		{
+			puts("Going back to Cruise option page.");
 			break;
 		}
 
+		default:
+			printf("\nInvalid option. Try again!\n");	//if a user entered not between 'a' ~ 'h' or 'A' ~ 'H', display the error msg
+			continue;
 		}
-		userInputFunction(&userInput);
-	}
+
+
+	} while (userInput != 'h' && userInput != 'H'); // will loop until user input = H/h
 
 	return;
 

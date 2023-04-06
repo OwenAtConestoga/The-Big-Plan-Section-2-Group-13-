@@ -14,7 +14,7 @@ void seatSelect(int cruiseNumber)
 	printf("\n<Cruise %d>\n", cruiseNumber);
 	puts("a) Show number of empty seats");
 	puts("b) Show list of empty seats");
-	puts("c) Show list of seats");
+	puts("c) Show list of assigned seats");
 	puts("d) Assign a customer to a seat assignment");
 	puts("e) Delete desired seat");
 	puts("f) Search Seat");

@@ -34,9 +34,6 @@ int main(int argc, char* argv[])
 	char* fileName1 = argv[1];
 	char* fileName2 = argv[2];
 
-	printf("\n%s\n ", fileName1);
-	printf("%s ", fileName2);
-
 	// read from file 
 	fileReader(fileName1, fileName2);
 

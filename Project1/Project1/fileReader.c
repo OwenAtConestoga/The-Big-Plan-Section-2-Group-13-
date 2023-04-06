@@ -19,6 +19,7 @@ void fileReader(char* fileName1, char* fileName2)
 	// create new file if it does not exist
 	FILE* fpointer1;
 
+	//open Binary file
 	if ((fpointer1 = fopen(fileName1, "rb")) == NULL) {
 		puts("Could not read CruiseReservationInfo.dat, new File Created!\n");
 		fpointer1 = fopen(fileName1, "ab");
@@ -63,19 +64,20 @@ void fileReader(char* fileName1, char* fileName2)
 
 	fclose(fpointer1);
 
-
+	//open ASCII file
 	if ((fpointer1 = fopen(fileName2, "r")) == NULL) {
-		puts("Could not read CruiseReservationInfo.dat, new File Created!\n");
+		puts("Could not read CruiseReservationInfo.txt, new File Created!\n");
 		fpointer1 = fopen(fileName2, "a");
 	}
 
 	// error handling: if the file does not open to read, terminate the program.
 	if ((fpointer1 = fopen(fileName2, "r")) == NULL)
 	{
-		puts("Error: Could not open file \"CruiseReservationInfo.dat\" to read.\n");
+		puts("Error: Could not open file \"CruiseReservationInfo.txt\" to read.\n");
 		exit(EXIT_FAILURE);
 	}
 
+	fclose(fpointer1);
 
 	puts("File Sucessfully Read\n");
 }

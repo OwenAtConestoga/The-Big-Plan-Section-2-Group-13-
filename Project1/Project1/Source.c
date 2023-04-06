@@ -31,12 +31,14 @@ Cruise cruises[NUMCRUISES] = {
 int main(int argc, char* argv[])
 {
 
-	char* fileName = argv[1];
+	char* fileName1 = argv[1];
+	char* fileName2 = argv[2];
 
-	printf("%s ", fileName);
+	printf("\n%s\n ", fileName1);
+	printf("%s ", fileName2);
 
 	// read from file 
-	fileReader(fileName);
+	fileReader(fileName1, fileName2);
 
 	char cruiseOption;
 	int cruiseNumber;
@@ -107,7 +109,7 @@ int main(int argc, char* argv[])
 Exit:
 
 	// writes seats to file 
-	fileWriter(fileName);
+	fileWriter(fileName1);
 	puts("^_^ Have a nice day ^_^");
 
 	return 0;

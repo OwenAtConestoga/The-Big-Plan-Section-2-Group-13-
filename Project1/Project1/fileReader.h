@@ -6,4 +6,4 @@
 
 #pragma once
 
-void fileReader(char*); 
+void fileReader(char*, char*); 

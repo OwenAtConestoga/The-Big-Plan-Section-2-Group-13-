@@ -13,23 +13,25 @@
 #include "structs.h"
 #include "fileReader.h"
 
-void fileReader(char* fileName)
+void fileReader(char* fileName1, char* fileName2)
 {
 
 	// create new file if it does not exist
 	FILE* fpointer1;
 
-	if ((fpointer1 = fopen(fileName, "rb")) == NULL) {
+	if ((fpointer1 = fopen(fileName1, "rb")) == NULL) {
 		puts("Could not read CruiseReservationInfo.dat, new File Created!\n");
-		fpointer1 = fopen(fileName, "ab");
+		fpointer1 = fopen(fileName1, "ab");
 	}
 
 	// error handling: if the file does not open to read, terminate the program.
-	if ((fpointer1 = fopen(fileName, "rb")) == NULL)					
+	if ((fpointer1 = fopen(fileName1, "rb")) == NULL)					
 	{
 		puts("Error: Could not open file \"CruiseReservationInfo.dat\" to read.\n");
 		exit(EXIT_FAILURE);
 	}
+
+	
 
 	// assign ID number
 	for (int i = 0; i < NUMCRUISES; i++)
@@ -60,6 +62,20 @@ void fileReader(char* fileName)
 	}
 
 	fclose(fpointer1);
+
+
+	if ((fpointer1 = fopen(fileName2, "r")) == NULL) {
+		puts("Could not read CruiseReservationInfo.dat, new File Created!\n");
+		fpointer1 = fopen(fileName2, "a");
+	}
+
+	// error handling: if the file does not open to read, terminate the program.
+	if ((fpointer1 = fopen(fileName2, "r")) == NULL)
+	{
+		puts("Error: Could not open file \"CruiseReservationInfo.dat\" to read.\n");
+		exit(EXIT_FAILURE);
+	}
+
 
 	puts("File Sucessfully Read\n");
 }

@@ -17,8 +17,7 @@
 #include "structs.h"
 #include "newSeat.h"
 
-#define EXITNUMBER -1
-
+#define NAMESIZE 30
 
 void newSeat(int arrayNum)
 {
@@ -39,7 +38,9 @@ void newSeat(int arrayNum)
 
 			if (cruises[arrayNum].seats[i].assigned != true) // if seat is not occupied 
 			{
-				
+				char firstName[NAMESIZE];
+				char lastName[NAMESIZE];
+
 				printf("Ticket Number %d\n", ticketID);
 
 				cruises[arrayNum].seats[i].ticketNumber = ticketID; // ticket number assignment
@@ -47,10 +48,13 @@ void newSeat(int arrayNum)
 				cruises[arrayNum].seats[i].idNumber = i; 
 
 				printf("Enter First Name: "); // Assign first and last name to customer reservation
-				scanf("%s", cruises[arrayNum].seats[i].firstName);
+				scanf("%s", firstName);
+				memcpy(cruises[arrayNum].seats[i].firstName, firstName, strlen(firstName)+1);
 				clearButter();
+
 				printf("Enter Last Name: ");
-				scanf("%s", cruises[arrayNum].seats[i].lastName);
+				scanf("%s", lastName);
+				memcpy(cruises[arrayNum].seats[i].lastName, lastName, strlen(lastName) + 1);
 				clearButter();
 				cruises[arrayNum].seats[i].assigned = true; 
 				

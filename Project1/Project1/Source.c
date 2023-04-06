@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 
+#include "userInput.h"
 #include "clearBuffer.h"
 #include "structs.h"
 #include "menuPrint.h"
@@ -32,12 +33,12 @@ int main(int argc, char* argv[])
 
 	char* fileName = argv[1];
 
-	printf("%s", fileName);
+	printf("%s ", fileName);
 
 	// read from file 
 	fileReader(fileName);
 
-	char topUserInput;
+	char cruiseOption;
 	int cruiseNumber;
 	int arrayNum;
 
@@ -47,10 +48,10 @@ int main(int argc, char* argv[])
 	do 
 	{ 
 		topLevelMenuPrint();
-		topUserInput = getc(stdin);
+		cruiseOption = userInput();
 		clearButter();
 
-		switch (topUserInput)
+		switch (cruiseOption)
 		{
 
 		case 'a': // cruise number 10
@@ -101,7 +102,7 @@ int main(int argc, char* argv[])
 		}
 	
 
-	} while (topUserInput != 'e' && topUserInput != 'E'); // will loop until user input = e/E
+	} while (cruiseOption != 'e' && cruiseOption != 'E'); // will loop until user input = e/E
 
 Exit:
 

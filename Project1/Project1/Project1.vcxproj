@@ -140,6 +140,7 @@
     <ClCompile Include="seatSelectScreen.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="topLevelMenu.c" />
+    <ClCompile Include="userInput.c" />
     <ClCompile Include="userSeats.c" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
     <ClInclude Include="seatSelectScreen.h" />
     <ClInclude Include="structs.h" />
     <ClInclude Include="topLevelMenu.h" />
+    <ClInclude Include="userInput.h" />
     <ClInclude Include="userSeats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

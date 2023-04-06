@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 
+#include "userInput.h"
 #include "clearBuffer.h"
 #include "structs.h"
 #include "menuPrint.h"
@@ -23,16 +24,16 @@
 void menuPrint(int cruiseNumber, int arrayNum)
 {
 
-	char userInput = 0;
+	char menuOption = 0;
 
 	do
 	{
 		seatSelect(cruiseNumber);
-		userInput = getc(stdin);
+		menuOption = userInput();
 		clearButter();
 
 
-		switch (userInput)
+		switch (menuOption)
 		{
 
 		case 'a': // show number of empty seats
@@ -97,7 +98,7 @@ void menuPrint(int cruiseNumber, int arrayNum)
 		}
 
 
-	} while (userInput != 'h' && userInput != 'H'); // will loop until user input = H/h
+	} while (menuOption != 'h' && menuOption != 'H'); // will loop until user input = H/h
 
 	return;
 

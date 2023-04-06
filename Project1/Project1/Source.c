@@ -109,7 +109,7 @@ int main(int argc, char* argv[])
 Exit:
 
 	// writes seats to file 
-	fileWriter(fileName1, fileName2);
+	fileWriter(fileName1);
 	puts("^_^ Have a nice day ^_^");
 
 	return 0;

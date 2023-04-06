@@ -6,4 +6,4 @@
 
 #pragma once
 
-void fileWriter(char*, char*); 
+void fileWriter(char*); 

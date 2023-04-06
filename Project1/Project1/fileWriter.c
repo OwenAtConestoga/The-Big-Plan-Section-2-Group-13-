@@ -13,10 +13,10 @@
 #include "structs.h"
 #include "fileWriter.h"
 
-void fileWriter(char* fileName1, char* fileName2)
+void fileWriter(char* fileName)
 {
 	// write cruises into file using append mode 
-	FILE* fpointer1 = fopen(fileName1, "ab");
+	FILE* fpointer1 = fopen(fileName, "ab");
 
 	int size = sizeof(Cruise);
 

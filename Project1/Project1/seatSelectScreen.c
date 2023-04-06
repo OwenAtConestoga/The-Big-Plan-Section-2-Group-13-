@@ -8,6 +8,7 @@
 
 #include "seatSelectScreen.h"
 
+// Print statements for different menu options
 void seatSelect(int cruiseNumber)
 {
 	printf("\n<Cruise %d>\n", cruiseNumber);

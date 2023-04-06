@@ -9,7 +9,7 @@
 
 void topLevelMenuPrint()
 {
-	// displays menu
+	// displays menu for different cruise options
 	puts("\n<Cruise Options> ");
 	puts("a) Cruise 10");
 	puts("b) Cruise 30");
